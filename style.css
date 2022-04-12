@@ -1,0 +1,18 @@
+
+#titulo1 {color: rgb(16, 44, 128);
+        text-align: center; } 
+
+#parrafo1:hover{color: rgb(196, 105, 182)}
+
+
+#botoncito:hover {border-radius: 30px;
+            color: rgb(152, 33, 33);
+        transform: scale(2);
+        margin-left: 30px;}
+
+
+
+
+#division1:hover {
+    background-color: rgb(218, 242, 100); 
+}
