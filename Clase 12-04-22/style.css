@@ -11,8 +11,10 @@
         margin-left: 30px;}
 
 
-
-
+        /* El hover es una especie de boolean, que cuando alguien pasa el mouse por
+        encima cambia a lo que este dentro de la variable. 
+        Por ejemplo puede haber un boton comun y corriente, y con el hover, a pasar
+        el mouse por encima, este cambiara su forma a la que se le defina. */
 #division1:hover {
     background-color: rgb(218, 242, 100); 
 }
