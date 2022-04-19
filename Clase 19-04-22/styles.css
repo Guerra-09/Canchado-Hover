@@ -1,0 +1,7 @@
+div {
+    border : 1px solid
+}
+
+#col1 {
+    columns: 5px;
+}
