@@ -1,0 +1,32 @@
+#body {
+    background-color: black;
+}
+
+
+div {border: solid 1px;}
+
+#fondo {background-color: lightsteelblue;}
+
+
+#menu {
+    height: 700px;
+    background-color: firebrick;
+}
+
+#botoncito {
+    background-color: brown;
+}
+
+#titulin {
+    background-color: chocolate;
+}
+
+#social {
+    height: 350px;
+    background-color: cyan;
+}
+
+#notis {
+    height: 350px;
+    background-color: darkgreen ;
+}
