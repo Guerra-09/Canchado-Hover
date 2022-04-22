@@ -1,7 +1,8 @@
 # Scripts hechos en clases
 
-Aca estoy dejando los scritps de las cosas que hemos aprendido en clases.
-pa los 🐸.
+##Objetivo
 
+-Dejar documentacion de todo lo realizado en clases en "Programacion Front-end".
 
-eso.
+'''python while True:
+puntosPalGuerra+=1'''
