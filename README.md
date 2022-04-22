@@ -1,8 +1,16 @@
 # Scripts hechos en clases
 
-##Objetivo
+## Objetivo
 
 -Dejar documentacion de todo lo realizado en clases en "Programacion Front-end".
 
-'''python while True:
-puntosPalGuerra+=1'''
+
+### Hack
+
+```python
+while True:
+  puntosPalGuerra +=1
+  if puntosPalGuerra == 70:
+    False
+```
+
