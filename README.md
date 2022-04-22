@@ -19,6 +19,6 @@ def ponerNota(puntos):
   prf.evaluarAlumno(puntos)
   
   
- p.ponerNota(puntosPalGuerra)
+p.ponerNota(puntosPalGuerra)
 ```
 
