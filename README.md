@@ -1,7 +1,24 @@
 # Scripts hechos en clases
 
-Aca estoy dejando los scritps de las cosas que hemos aprendido en clases.
-pa los 🐸.
+## Objetivo
+
+-Dejar documentacion de todo lo realizado en clases en "Programacion Front-end".
 
 
-eso.
+### Hack
+
+```python
+while True:
+  puntosPalGuerra +=1
+  if puntosPalGuerra == 70:
+    False
+    
+def ponerNota(puntos):
+  prf = Profesor()
+  prf.abrirLibro()
+  prf.evaluarAlumno(puntos)
+  
+  
+p.ponerNota(puntosPalGuerra)
+```
+
