@@ -1,7 +1,9 @@
 div {border: 1px solid;}
 
-.colicos {  height: 600px;}
+#row1 {
+    height: 700px;
+}
 
-#colicos2 { height: 220px ;}
-
-#colicos3 {height: 300px;}
+#col12 {
+    
+}
