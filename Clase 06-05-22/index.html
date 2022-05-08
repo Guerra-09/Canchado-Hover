@@ -26,11 +26,18 @@
                     <div class="row">
                         <div class="col"> 
 
-                            <div id="spacer" class="input-group">
+                            
+
+                            <div class="input-group spacer">
                                 <span class="input-group-text">Nombre y apellido</span>
-                                <input type="text" aria-label="First name" class="form-control">
-                                <input type="text" aria-label="Last name" class="form-control">
+                                <input id='form0' type="text" aria-label="First name" class="form-control">
+                                <input id='form1'type="text" aria-label="Last name" class="form-control">                
+
                             </div>
+                            <!-- <p style="color: red;">No pueden haber espacios en blanco!</p> -->
+
+                            
+                            
 
                         </div>      
                     </div>
@@ -40,9 +47,9 @@
                     <div class="row">
                         <div class="col"> 
 
-                            <div id="spacer" class="input-group">
+                            <div class="input-group spacer">
                                 <span class="input-group-text">Fecha de nacimiento</span>
-                                <input type='date'>
+                                <input id='form2' type='date'>
                             </div>
 
                         </div>          
@@ -53,9 +60,9 @@
                     <div class="row">
                         <div class="col"> 
 
-                            <div id="spacer" class="input-group">
+                            <div class="input-group spacer">
                                 <span class="input-group-text">Correo</span>
-                                <input type="text" aria-label="First name" class="form-control">
+                                <input id="form3" type="text" class="form-control">
                             </div>
 
                         </div>          
@@ -65,8 +72,8 @@
                         <div class="col"> 
                             
                             <div class="input-group">
-                                <span id="spacer" class="input-group-text">Dejanos tus comentarios!</span>
-                                <textarea id="spacer" class="form-control" aria-label="With textarea"></textarea>
+                                <span class="input-group-text spacer">Dejanos tus comentarios!</span>
+                                <textarea id="form4" class="form-control spacer" aria-label="With textarea"></textarea>
                             </div>
                             
                         </div>          
@@ -76,10 +83,16 @@
                     <div class="row">
                         <div class="col"> 
                             
-                            <button id="spacer" type="button" class="btn btn-primary btn-lg">Enviar formulario </button>
+                            <button onclick="verData()" type="button" class="btn btn-primary btn-lg spacer">Enviar formulario </button>
                             
                         </div>          
                     </div>
+
+                   
+                    
+                    
+
+
                     
 
                 </div>
