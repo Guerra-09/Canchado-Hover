@@ -1,8 +1,11 @@
-/* div {
-    border: 1px solid;
-} */
+body {
+    font-size: 25px;
+}
 
-.spacer{
-    /* height: 100px; */
-    margin-top: 50px ;
+.inputs {
+    font-size: 40px;
+}
+
+button {
+    font-size: 40px;
 }
