@@ -30,12 +30,13 @@
 
                             <div class="input-group spacer">
                                 <span class="input-group-text">Nombre y apellido</span>
-                                <input id='form0' type="text" aria-label="First name" class="form-control">
-                                <input id='form1'type="text" aria-label="Last name" class="form-control">                
+                                <input id='form_nombre' type="text" aria-label="First name" class="form-control" placeholder="Simbad">
+                                <input id='form_apellido'type="text" aria-label="Last name" class="form-control" placeholder="Fernandes">
+                                             
 
                             </div>
                             <!-- <p style="color: red;">No pueden haber espacios en blanco!</p> -->
-
+                            <span id="campo_nombre"></span> <span id="campo_apellido"></span>
                             
                             
 
@@ -49,8 +50,10 @@
 
                             <div class="input-group spacer">
                                 <span class="input-group-text">Fecha de nacimiento</span>
-                                <input id='form2' type='date'>
+                                <input id='form_fecha' type='date'>
                             </div>
+
+                            <span id="campo_fecha"></span> 
 
                         </div>          
                     </div>
@@ -62,8 +65,10 @@
 
                             <div class="input-group spacer">
                                 <span class="input-group-text">Correo</span>
-                                <input id="form3" type="text" class="form-control">
+                                <input id="form_correo" type="text" class="form-control" placeholder="joander.cabrolier@inacapmail.cl">
                             </div>
+
+                            <span id="campo_correo"></span> 
 
                         </div>          
                     </div>
@@ -73,8 +78,10 @@
                             
                             <div class="input-group">
                                 <span class="input-group-text spacer">Dejanos tus comentarios!</span>
-                                <textarea id="form4" class="form-control spacer" aria-label="With textarea"></textarea>
+                                <textarea placeholder='Escribe algo bonito aqui' id="form_form" class="form-control spacer separar" aria-label="With textarea"></textarea>
                             </div>
+
+                            <span id="campo_form"></span> 
                             
                         </div>          
                     </div>

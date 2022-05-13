@@ -6,3 +6,39 @@
     /* height: 100px; */
     margin-top: 50px ;
 }
+
+#spn01{
+    position: relative;
+    margin-left: 630px;
+}
+
+.validText{
+    
+    color: green;
+
+}
+
+.invalidText{
+    
+    color: red;
+
+}
+
+
+.validBorder{  
+
+    border: 1px solid !important;    
+    border-color: green !important;
+
+}
+
+.invalidBorder{  
+
+    border: 1px solid !important;
+    border-color: red !important;
+}
+
+#campo_apellido{
+    margin-left: 490px;
+    position: absolute;
+}
