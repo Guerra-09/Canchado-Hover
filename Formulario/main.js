@@ -107,6 +107,29 @@ let verData = () =>{
         document.getElementById('form_form').classList.add('validBorder')
     }
 
+
+
+
+    if (document.getElementById('selects').value == 'Genero'){
+
+        
+        document.getElementById('genero').innerHTML = 'Este campo no puede estar vacio'
+        document.getElementById('genero').classList.add('invalidText')
+
+        document.getElementById('genero').classList.remove('validText')
+        document.getElementById('genero').classList.add('invalidBorder')
+
+    }
+    else{
+
+        document.getElementById('genero').innerHTML = 'Genero aceptado'
+        document.getElementById('genero').classList.remove('invalidText')
+        document.getElementById('genero').classList.add('validText')
+
+        document.getElementById('genero').classList.remove('invalidBorder')
+        document.getElementById('genero').classList.add('validBorder')
+    }
+
 }
 
 
