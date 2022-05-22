@@ -1,0 +1,20 @@
+div {
+    border: solid 1px;
+}
+
+#primerRow{
+    margin: 45px 0px 0px 20px;
+}
+
+.botones{
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.inputs {
+    font-size: 30px;
+}
+
+.spans {
+    margin-left: 100px;
+}
