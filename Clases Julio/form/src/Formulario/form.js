@@ -8,10 +8,24 @@ import Button from '../Button/button.js';
 
 class Form extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            marca: [
+                {name: "Hyundai", id: 1},
+                {name: "Mazda", id: 2}
+                ],
+            modelo: [
+                {name: "Cube", id: 1},
+                {name: "Elantra", id: 2}
+                    ]
+        }
+        //this.handleClick = this.handleClick.bind(this)
+        //funcion flecha o esto
+    }
+
     render() {
 
-        var marca = ["Hyundai", "Mazada"]
-        var modelo = ["Cube", "Elantra"]
         //<Button type="button"> Enviar formulario </Button>
 
         return (
@@ -20,8 +34,8 @@ class Form extends React.Component {
                 <Input titulo= "Agregar patente" type="text" />
                 <Input titulo= "Agregar Anio" type="number" />
 
-                <Select name="marca" items={marca} />
-                <Select name="modelo" items={modelo} />
+                <Select name="marca" items={this.state.marca} />
+                <Select name="modelo" items={this.state.modelo} />
                 <Button />
                 
             </div>
