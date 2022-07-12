@@ -3,11 +3,11 @@ function select(props) {
     return(
         <div>
             <p> Seleccione {props.name} </p>
-            <select>
+            <select onChange={ (event) => {props.change(event)}}>
 
                 <option> Seleccione un item...</option>
                 {props.items.map((item) => {
-                    return (<option key={item.id} >{item.name}</option>)
+                    return (<option key={item.id}> {item.name} </option>)
                 })}
 
             </select>
