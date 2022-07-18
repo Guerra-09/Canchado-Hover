@@ -7,13 +7,25 @@ import Historial from "./Historial/historial";
 
 class Menu extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+
+            //1. Array con las busquedas realizadas
+            pokemonSearch: ["lucario"]
+            
+        }
+    }
+
+    
+
     render() {
         
         return (
             <div>
 
                 <Pokemon />
-                <Historial />
+                <Historial pokemonLastSearch={this.state.pokemonSearch} />
 
             </div>
         )
@@ -21,5 +33,6 @@ class Menu extends React.Component {
     }
 
 }
+
 
 export default Menu;

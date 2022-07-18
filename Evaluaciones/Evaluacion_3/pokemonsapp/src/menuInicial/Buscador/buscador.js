@@ -27,24 +27,26 @@ const Pokemon = (props) => {
     }, [texto])
 
 
-    const handleChange = (e) => {
-        setSearchPkmn(e.target.value)
+    const handleChange = (pkmn) => {
+        setSearchPkmn(pkmn.target.value)
+        
     }
 
     const clickUsuario = (evento) => {
         setTexto(searchPkm)
-
+        
     }
 
+    
 
     return (
         <>
             <h3 > Busqueda de Pokemon </h3>
-            <input placeholder="riolu" type="text" onChange={ (e) => { handleChange(e) } } />
+            <input placeholder="riolu" type="text" onChange={ (pkmn) => { handleChange(pkmn) } } />
             <br />
             <button className='button' type="button" onClick={clickUsuario}>Buscar</button>
             <br />
-            <li lastPokemon={props.searchPkm} />
+            
 
             {/*Funcion flecha, el e es un evento 'a lo que se cambia' y luego se llama a la funcion y se le pasa (e) como parametro  */}
             <img src={imagePkmn} />
