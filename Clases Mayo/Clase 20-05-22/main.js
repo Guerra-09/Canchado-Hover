@@ -50,3 +50,9 @@ let listar = () => {
 }
 
 
+
+let removeLast = () => {
+
+    autos.pop()
+
+}

@@ -28,13 +28,13 @@ class Form extends React.Component {
         }
         //this.handleClick = this.handleClick.bind(this)
         //funcion flecha o esto
+    }
 
-        const handleChange = (event) => {
-            this.setState({
-                model: event.target.value
-            })
-            console.log(this.state)
-        }
+    handleChange = (event) => {
+        this.setState({
+            model: event.target.value
+        })
+        console.log(this.state)
     }
 
     render() {
