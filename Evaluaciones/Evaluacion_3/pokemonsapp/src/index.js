@@ -7,6 +7,7 @@ import Pokemon from './menuInicial/Buscador/buscador';
 import Combate from './menuInicial/Combate/combate';
 import Historial from './menuInicial/Historial/historial';
 import Lista from './menuInicial/Lista/lista';
+import Buscador from './menuInicial/Buscador/buscador';
 
 // import Menu from './menuInicial/menu'
 

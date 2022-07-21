@@ -1,5 +1,8 @@
 .menuBar {
-    margin-left: 250px;
-    margin-right: 330px;
+    text-align: center;
     border: solid 1px;
+}
+
+.links {
+    padding-right: 50px;
 }

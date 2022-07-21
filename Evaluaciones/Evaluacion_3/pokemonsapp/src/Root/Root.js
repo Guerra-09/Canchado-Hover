@@ -6,10 +6,10 @@ const Root = (props) => {
         <div className="menuBar">
         {/* Esto funciona porque esta el browser router en el index */}
             <nav>
-                <Link to="/pokemon"> Pokemon </Link> 
-                <Link to="/lista"> Lista </Link>
-                <Link to="/historial"> Historial </Link> 
-                <Link to="/combate"> Combate </Link>
+                <Link to="/pokemon" className="links"> Pokemon </Link> 
+                <Link to="/lista" className="links"> Lista </Link>
+                <Link to="/historial" className="links"> Historial </Link> 
+                <Link to="/combate" className="links"> Combate </Link>
                 <br /> <br />
                 <Outlet />
             </nav>

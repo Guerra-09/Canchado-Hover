@@ -4,13 +4,20 @@ import './buscador.css'
 
 
 
-const Pokemon = (props) => {
+const Buscador = (props) => {
 
     const [texto, setTexto] = useState("")
 
     const [imagePkmn, setImagePkmn] = useState("")
-    const [searchPkm, setSearchPkmn] = useState("https://pokeapi.co/api/v2/pokemon/")
-    const [lastPokemon, setLastPokemon] = useState("")
+    const [searchPkm, setSearchPkmn] = useState("")
+    const [pkmnHp , setPkmnHp] = useState("")
+    const [pkmnAtt, setPkmnAtt] = useState("")
+    const [pkmnAttSp, setPkmnAttSp] = useState("")
+    const [pkmnDef, setPkmnDef] = useState("")
+    const [pkmnDefSp, setPkmnDefSp] = useState("")
+    const [pkmnSpeed, setPkmnSpeed] = useState("")
+    const [pkmnAtributes, setPkmnAtributes] = useState(0)
+
 
 
 
@@ -20,7 +27,14 @@ const Pokemon = (props) => {
         .then(res => res.json())
         .then(
             (data) => {
+                //console.log(data.stats)
                 setImagePkmn(data.sprites.front_default)
+                setPkmnHp(data.stats[0].base_stat)
+                setPkmnAtt(data.stats[1].base_stat)
+                setPkmnDef(data.stats[2].base_stat)
+                setPkmnAttSp(data.stats[3].base_stat)
+                setPkmnDefSp(data.stats[4].base_stat)
+                setPkmnSpeed(data.stats[5].base_stat)
             }
         )
 
@@ -37,11 +51,32 @@ const Pokemon = (props) => {
         
     }
 
+    const clickPokemon = (event) => {
+        console.log("Pokemon presionado")
+        console.log(pkmnAtributes)
+        if (pkmnAtributes == 0){
+            setPkmnAtributes(1)
+            
+        } else {
+            setPkmnAtributes(0)
+            
+        }
+
+
+        // <p> Heal points: {pkmnHp} </p>
+        // <p> Attack: {pkmnAtt} </p>
+        // <p> Defence: {pkmnDef} </p>
+        // <p> Special Attack: {pkmnAttSp} </p>
+        // <p> Special Defence: {pkmnDefSp} </p>
+        // <p> Speed: {pkmnSpeed} </p>
+
+    }
+
     
 
     return (
         <>
-            <h3 > Busqueda de Pokemon </h3>
+            <h3 > Busqueda de Buscador </h3>
             <input placeholder="riolu" type="text" onChange={ (pkmn) => { handleChange(pkmn) } } />
             <br />
             <button className='button' type="button" onClick={clickUsuario}>Buscar</button>
@@ -49,11 +84,21 @@ const Pokemon = (props) => {
             
 
             {/*Funcion flecha, el e es un evento 'a lo que se cambia' y luego se llama a la funcion y se le pasa (e) como parametro  */}
-            <img src={imagePkmn} />
+            <img onClick={clickPokemon} src={imagePkmn} />
+
+            <div className="pkmnStats">
+                <p> Heal points: {pkmnHp} </p>
+                <p> Attack: {pkmnAtt} </p>
+                <p> Defence: {pkmnDef} </p>
+                <p> Special Attack: {pkmnAttSp} </p>
+                <p> Special Defence: {pkmnDefSp} </p>
+                <p> Speed: {pkmnSpeed} </p>
+            </div>
+            
         </>
     )
 
 }
 
 
-export default Pokemon;
+export default Buscador;
