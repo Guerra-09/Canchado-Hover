@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import Root from './Root/Root'
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
-import Pokemon from './menuInicial/Buscador/buscador';
 import Combate from './menuInicial/Combate/combate';
 import Historial from './menuInicial/Historial/historial';
 import Lista from './menuInicial/Lista/lista';
@@ -14,21 +13,17 @@ import Buscador from './menuInicial/Buscador/buscador';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
     <BrowserRouter>
-    <Routes>
-
-      <Route path="/" element={<Root />}>
-        <Route path='/pokemon' element={<Pokemon/> } />
-        <Route path='/combate' element={<Combate/> } />
-        <Route path='/historial' element={<Historial/> } />
-        <Route path='/lista' element={<Lista /> } />          
-      </Route>
-
-    </Routes>
+      <Routes>
+        <Route path="/" element={ <Root />}>
+          <Route path='/pokemon' element={ <Buscador/> } />
+          <Route path='/combate' element={ <Combate/> } />
+          <Route path='/historial' element={ <Historial/> } />
+          <Route path='/lista' element={ <Lista /> } />          
+        </Route>
+      </Routes>
     </BrowserRouter>
-
-    {/* <Menu /> */}
+    <Buscador />
   </React.StrictMode>
 );
 

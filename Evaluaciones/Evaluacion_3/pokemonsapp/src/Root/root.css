@@ -1,8 +1,17 @@
 .menuBar {
+
     text-align: center;
     border: solid 1px;
+    background-color: rgb(26, 49, 69);
+    
 }
 
 .links {
-    padding-right: 50px;
+    /* padding-right: 50px; */
+    color: white;
+
+}
+
+.autlet {
+    color: white;
 }

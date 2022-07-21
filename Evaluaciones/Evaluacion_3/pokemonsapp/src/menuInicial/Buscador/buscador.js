@@ -19,15 +19,12 @@ const Buscador = (props) => {
     const [pkmnAtributes, setPkmnAtributes] = useState(0)
 
 
-
-
     useEffect( () => {
         
         fetch("https://pokeapi.co/api/v2/pokemon/" + searchPkm) 
         .then(res => res.json())
         .then(
             (data) => {
-                //console.log(data.stats)
                 setImagePkmn(data.sprites.front_default)
                 setPkmnHp(data.stats[0].base_stat)
                 setPkmnAtt(data.stats[1].base_stat)
@@ -59,16 +56,8 @@ const Buscador = (props) => {
             
         } else {
             setPkmnAtributes(0)
-            
+
         }
-
-
-        // <p> Heal points: {pkmnHp} </p>
-        // <p> Attack: {pkmnAtt} </p>
-        // <p> Defence: {pkmnDef} </p>
-        // <p> Special Attack: {pkmnAttSp} </p>
-        // <p> Special Defence: {pkmnDefSp} </p>
-        // <p> Speed: {pkmnSpeed} </p>
 
     }
 
@@ -76,17 +65,17 @@ const Buscador = (props) => {
 
     return (
         <>
-            <h3 > Busqueda de Buscador </h3>
-            <input placeholder="riolu" type="text" onChange={ (pkmn) => { handleChange(pkmn) } } />
-            <br />
-            <button className='button' type="button" onClick={clickUsuario}>Buscar</button>
-            <br />
-            
-
             {/*Funcion flecha, el e es un evento 'a lo que se cambia' y luego se llama a la funcion y se le pasa (e) como parametro  */}
-            <img onClick={clickPokemon} src={imagePkmn} />
 
             <div className="pkmnStats">
+
+                <input placeholder="pokemon name..." type="text" onChange={ (pkmn) => { handleChange(pkmn) } } />
+                <br />
+                <button className='button' type="button" onClick={clickUsuario}>Buscar</button>
+                <br />
+
+                <img onClick={clickPokemon} src={imagePkmn} />
+
                 <p> Heal points: {pkmnHp} </p>
                 <p> Attack: {pkmnAtt} </p>
                 <p> Defence: {pkmnDef} </p>
@@ -99,6 +88,8 @@ const Buscador = (props) => {
     )
 
 }
+
+
 
 
 export default Buscador;
