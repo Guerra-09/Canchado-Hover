@@ -18,6 +18,7 @@ const Buscador = (props) => {
     const [pkmnSpeed, setPkmnSpeed] = useState("")
     const [pkmnAtributes, setPkmnAtributes] = useState(0)
 
+    //change to see in github
 
     useEffect( () => {
         
