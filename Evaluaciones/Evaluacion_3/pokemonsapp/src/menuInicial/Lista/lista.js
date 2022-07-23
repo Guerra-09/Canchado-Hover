@@ -20,7 +20,9 @@ const Lista = (props) => {
     // se le pone algo a [] y cuando cambia, se ejecuta el useEffect
 
 
-
+    const showPokemonName = () => {
+        console.log()
+    }
 
     return (
         <>
@@ -29,7 +31,9 @@ const Lista = (props) => {
                 {pokemon.map((pkmns) => {
                     return(
                     <div>
+        
                         {pkmns.name}
+                        
                     </div>)
                 })}
             </ul>
