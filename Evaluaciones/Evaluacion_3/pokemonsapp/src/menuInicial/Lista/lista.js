@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import './lista'
 
 
 const Lista = (props) => {
@@ -7,7 +8,7 @@ const Lista = (props) => {
 
     useEffect( () => {
         
-        fetch("https://pokeapi.co/api/v2/pokemon?limit=1000000&offset=0") 
+        fetch("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0") 
         .then(res => res.json())
         .then(
             (data) => {
@@ -26,17 +27,16 @@ const Lista = (props) => {
 
     return (
         <>
-            Lista
-            <ul>
-                {pokemon.map((pkmns) => {
-                    return(
-                    <div>
-        
-                        {pkmns.name}
-                        
-                    </div>)
-                })}
-            </ul>
+            <h1> Lista de Pokemon </h1>
+            {pokemon.map((pkmns) => {
+                return(
+                <div>
+    
+                    {pkmns.name}
+                    
+                </div>)
+            })}
+            
         </>
     )
 }

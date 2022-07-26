@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react"
 import './buscador.css'
+import Historial from "../Historial/historial"
 
-
+// 1. console.log() imprime objetos linea 62.
+// 2. pasar array a component historial sin mostrarlo en buscador
+// 3. Ir a componente pokemon con roouting (?)
+// 4. Combate pokemon enteros
 
 
 const Buscador = (props) => {
@@ -16,7 +20,9 @@ const Buscador = (props) => {
     const [pkmnDef, setPkmnDef] = useState("")
     const [pkmnDefSp, setPkmnDefSp] = useState("")
     const [pkmnSpeed, setPkmnSpeed] = useState("")
-    const [pkmnAtributes, setPkmnAtributes] = useState(0)
+
+    const [busquedas, setBusquedas] = useState([])
+
 
     //change to see in github
 
@@ -46,20 +52,17 @@ const Buscador = (props) => {
 
     const clickUsuario = (evento) => {
         setTexto(searchPkm)
+
+
+        setBusquedas(prevArray => [...prevArray, <div> 
+                                                    <br /> 
+                                                    {searchPkm} 
+                                                </div>])
         
-    }
 
-    const clickPokemon = (event) => {
-        console.log("Pokemon presionado")
-        console.log(pkmnAtributes)
-        if (pkmnAtributes == 0){
-            setPkmnAtributes(1)
-            
-        } else {
-            setPkmnAtributes(0)
-
-        }
-
+        
+        
+        console.log("Vida: " + {pkmnHp} + "Ataque: " + {pkmnAtt} + "Def: " + {pkmnDef} + "attS: " + {pkmnAttSp} + "defS:" + {pkmnDefSp} + "speed: " + {pkmnSpeed}) 
     }
 
     
@@ -73,16 +76,11 @@ const Buscador = (props) => {
                 <input placeholder="pokemon name..." type="text" onChange={ (pkmn) => { handleChange(pkmn) } } />
                 <br />
                 <button className='button' type="button" onClick={clickUsuario}>Buscar</button>
-                <br />
+                <div>
+                    { <Historial historialBusquedas={busquedas} />  } 
+                </div>
 
-                <img onClick={clickPokemon} src={imagePkmn} />
 
-                <p> Heal points: {pkmnHp} </p>
-                <p> Attack: {pkmnAtt} </p>
-                <p> Defence: {pkmnDef} </p>
-                <p> Special Attack: {pkmnAttSp} </p>
-                <p> Special Defence: {pkmnDefSp} </p>
-                <p> Speed: {pkmnSpeed} </p>
             </div>
             
         </>

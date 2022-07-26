@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import './root.css'
+import Buscador from "../menuInicial/Buscador/buscador";
 
 const Root = (props) => {
     return (
@@ -7,10 +8,11 @@ const Root = (props) => {
         {/* Esto funciona porque esta el browser router en el index */}
             <nav>
             <div className="autlet">
-                    <Link to="/pokemon" className="links"> Pokemon </Link> 
+                    {/* <Link to="/pokemon" className="links"> Pokemon </Link>  */}
                     <Link to="/lista" className="links"> Lista </Link>
                     <Link to="/historial" className="links"> Historial </Link> 
-                    <Link to="/combate" className="links"> Combate </Link>
+                    <Link to="/combate" className="links"> Combate </Link> 
+                    <Buscador />
                     <br /> <br />
 
                     <Outlet />

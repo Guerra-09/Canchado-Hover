@@ -6,24 +6,25 @@ import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import Combate from './menuInicial/Combate/combate';
 import Historial from './menuInicial/Historial/historial';
 import Lista from './menuInicial/Lista/lista';
-import Buscador from './menuInicial/Buscador/buscador';
+
 
 // import Menu from './menuInicial/menu'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={ <Root />}>
-          <Route path='/pokemon' element={ <Buscador/> } />
           <Route path='/combate' element={ <Combate/> } />
           <Route path='/historial' element={ <Historial/> } />
           <Route path='/lista' element={ <Lista /> } />          
         </Route>
       </Routes>
     </BrowserRouter>
-    <Buscador />
+    
+
   </React.StrictMode>
 );
 
