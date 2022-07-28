@@ -8,7 +8,7 @@ const Lista = (props) => {
 
     useEffect( () => {
         
-        fetch("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0") 
+        fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0") 
         .then(res => res.json())
         .then(
             (data) => {
@@ -21,23 +21,15 @@ const Lista = (props) => {
     // se le pone algo a [] y cuando cambia, se ejecuta el useEffect
 
 
-    const showPokemonName = () => {
-        console.log()
-    }
-
     return (
-        <>
+        <div>
             <h1> Lista de Pokemon </h1>
-            {pokemon.map((pkmns) => {
-                return(
-                <div>
-    
-                    {pkmns.name}
-                    
-                </div>)
+
+            {pokemon?.map((list, idx) => {
+                return(<div id="div" key={idx}>{list.name}</div>)
             })}
-            
-        </>
+                        
+        </div>
     )
 }
 

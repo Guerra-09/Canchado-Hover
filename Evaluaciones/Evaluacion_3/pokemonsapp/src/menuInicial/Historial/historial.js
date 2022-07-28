@@ -1,12 +1,12 @@
-import Buscador from "../Buscador/buscador";
+import Pokemon from "../Pokemon/Pokemon";
 
 
 function Historial(props) {
     
-    const busq = document.getElementById("busquedas")
 
     return (
         <>
+
             <p> {props.historialBusquedas} </p>
 
         </>

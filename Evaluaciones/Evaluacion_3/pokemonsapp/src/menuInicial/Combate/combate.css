@@ -1,0 +1,30 @@
+.pokemon1 {
+        
+}
+
+#pokemonImage1 {
+    height: 300px;
+    width: 300px;
+
+}
+
+.pokemon2 {
+    
+    
+
+}
+
+#pokemonImage2 {
+    height: 300px;
+    width: 300px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px;
+    margin-bottom: 100px;
+}

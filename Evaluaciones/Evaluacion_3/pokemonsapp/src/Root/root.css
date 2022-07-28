@@ -6,12 +6,22 @@
     
 }
 
+.h2 {
+    color: rgba(255, 255, 255, 0.66);
+}
+
 .links {
     /* padding-right: 50px; */
     color: white;
+    padding: 10px;
 
 }
 
 .autlet {
     color: white;
+}
+
+.wallpaper{
+    height: 300px;
+    width: 400px;
 }
