@@ -118,7 +118,7 @@ const Buscador = (props) => {
                     <div> Height: {pkm.height} </div>
                     <div> Base Experience: {pkm.base_experience} </div>
                     <div> Pokedex: {pkm.id} </div>
-                    <div>Tipo Principal: {pkm.types[0].type.name}</div>
+                    {/* <div>Tipo Principal: {pkm.types[0].type.name}</div> */}
                     <br></br> 
 
 

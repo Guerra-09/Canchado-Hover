@@ -42,11 +42,13 @@ const Combate = (props) => {
                 setDmg1(data.stats[1].base_stat)
 
 
-                console.log(data.abilities)
+                // console.log(data.abilities)
 
             }
         )
+    }, [texto])
 
+    useEffect( () => {
         fetch("https://pokeapi.co/api/v2/pokemon/" + searchPkm2) 
         .then(res => res.json())
         .then(
@@ -58,13 +60,10 @@ const Combate = (props) => {
                 setHp2(data.stats[0].base_stat)
                 setDmg2(data.stats[1].base_stat)
 
-
-                console.log(data.sprites.front_default)
-
+                // console.log(data.sprites.front_default)
             }
         )
-
-    }, [texto])
+    }, [texto2])
 
 
     //Busqueda pokemon 1
@@ -87,6 +86,8 @@ const Combate = (props) => {
         console.log(damage)
     }
 
+
+
     //Busqueda pokemon 2
     const handleChange2 = (pkmn2) => {
         setSearchPkmn2(pkmn2.target.value)
@@ -94,13 +95,14 @@ const Combate = (props) => {
     }
 
     const clickUsuario2 = (evento) => {
-        setTexto(searchPkm)
+        setTexto2(searchPkm)
     }
 
     
 
     return (
         <div className="container">
+            
             <div className="pokemon1">
 
                 <input placeholder="pokemon name..." type="text" onChange={ (pkmn) => { handleChange(pkmn) } } />
